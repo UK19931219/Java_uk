@@ -1,6 +1,12 @@
 package curriculum_B;
 
+import java.io.PrintStream;
+import java.util.Scanner;
+
 public class Qes1_3 {
+
+	
+
 
 	// 入力されたユーザー名が半角英数字かどうか判定する関数を定義する
 	public static Boolean isHalfWidthAlphanumeric(String value) {
@@ -60,6 +66,10 @@ public class Qes1_3 {
 	// main関数
 	public static void main(String[] args) {
 		
+		// scanを開く
+		Scanner scan = new Scanner(System.in);
+		
+		// String型の変数nameを宣言し、初期化する
 		String name = "";
 		// ブーリアン型の変数inputNameを宣言し、falseを代入する
 		Boolean inputName = false;
@@ -156,6 +166,11 @@ public class Qes1_3 {
 		
 		// 勝つまでにかかった回数を出力する
 		System.out.println("勝つまでにかかった合計回数は" + i + "回です。");
+		
+		// scanを閉じる
+		scan.close();
+		
+		
 	}
 
 }

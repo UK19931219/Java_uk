@@ -15,7 +15,7 @@ public class Qes5 {
             	System.out.print(String.format("%03d", i) + " * " + String.format("%03d", j) + " = " + String.format("%03d", m));
             	
             	//もしｍが９より小さい場合、||を出力
-            	if(j < 9) {
+            	if(j < 20) {
             		System.out.print(" || ");
             	}
             }

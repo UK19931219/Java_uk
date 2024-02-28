@@ -7,6 +7,8 @@ public class Qes7 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		// scanを開く
+		Scanner scan = new Scanner(System.in);
 		// String型の変数Nを宣言
 		String N = "";
 		// 生徒の人数を入力してくださいと出力する
@@ -106,6 +108,8 @@ public class Qes7 {
 		// 全体の平均点を出力
 		System.out.println("全体の平均点は：" + averageAve + "です。");
 		
+		// scanを閉じる
+		scan.close();
 	}
 
 }

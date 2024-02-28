@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Qes6 {
 
+	private static Scanner conEle;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -58,12 +60,16 @@ public class Qes6 {
 						break;
 				}
 				
+				
 				// 改行
 				System.out.println();
 				
 			}
 		
 		}
+		
+		// Scannerを閉じる
+		conEle.close();
 		
 	}
 
