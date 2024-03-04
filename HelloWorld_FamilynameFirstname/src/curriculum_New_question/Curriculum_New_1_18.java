@@ -11,7 +11,7 @@ public class Curriculum_New_1_18 {
 	
 	// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
 	// メソッドmultiplicationを定義
-	public static void intMultiplication(int a, int b) {
+	public static void calculation(int a, int b) {
 		// 変数solutionを宣言。引数aと引数bをかけた値を乗算
 		int solution = a * b;
 		// 戻り値として変数solutionを返す
@@ -32,7 +32,7 @@ public class Curriculum_New_1_18 {
 			
 	// Q4：Q2をオーバーロードして引数を小数2つに変更し、引数同士を和算しコンソールに出力してください。
 	// メソッドdoubleAddを定義する
-	public static void doubleAdd(double a, double b) {
+	public static void calculation(double a, double b) {
 		// 変数solutionを宣言し、引数aと引数bを足した値を代入する
 		double solution = a + b;
 		//　変数solutionの値を出力する
@@ -104,23 +104,23 @@ public class Curriculum_New_1_18 {
 		greeting("JavaSE", 11);
 		
 		// Q2
-		intMultiplication(10, 20);
+		calculation(10, 20);
 		
 		// Q3
 		int example[] = {2, 3, 1, 7, 3, 9};
 		order(example);
 		
 		// Q4
-		doubleAdd(2.5, 9.3);
+		calculation(2.5, 9.3);
 		
 		// Q5
-		randNum(6);
+		int numBox[] = randNum(6);
 		
 		// Q6
-		randAve(randNum(6));
+		double ave = randAve(numBox);
 		
 		// Q7
-		judAve(randAve(randNum(6)));
+		judAve(ave);
 	}
 
 }
