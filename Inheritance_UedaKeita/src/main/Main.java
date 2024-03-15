@@ -1,8 +1,12 @@
 package main;
 
-// Nameクラスをインポート
+
+import character.Attack;
+import character.Defence;
+import character.Hp;
+import character.Mp;
 import character.Name;
-// Statusクラスをインポート
+import character.Speed;
 import character.Status;
 
 public class Main {
@@ -13,9 +17,6 @@ public class Main {
 		// Nameクラスを呼び出す
 		Name n = new Name();
 		
-		// Statusクラスを呼び出す
-		Status s = new Status();
-		
 		// コンソールに出力
 		System.out.print("名前を入力してください：");
 		// コンソールで名前を入力
@@ -23,23 +24,41 @@ public class Main {
 		// 入力された名前をNameクラスのnameに代入
 		n.setName(name);
 		// outNameメソッドを呼び出す
-		n.outName();
+		System.out.println(n.getName());
 		// ステータスと出力する
 		System.out.println("ステータス");
 		
-		// 各ステータスの変数を宣言し、setStatusメソッドを用いて数値を代入する
-		int hp = s.setStatus();
-		int mp = s.setStatus();
-		int attack = s.setStatus();
-		int speed = s.setStatus();
-		int defence = s.setStatus();
+		// Statusクラスを呼び出す
+		Status s = new Status();
 		
-		// 各ステータスを出力する
-		System.out.println("HP:" + hp);
-		System.out.println("MP:" + mp);
-		System.out.println("攻撃力:" + attack);
-		System.out.println("素早さ:" + speed);
-		System.out.println("防御力:" + defence);
+		// Hpクラスを呼び出す
+		Hp h = new Hp();
+		// Hpの値を出力する
+		h.setStatus();
+		
+		// Mpクラスを呼び出す
+		Mp m = new Mp();
+		// Mpの値を出力する
+		m.setStatus();
+		
+		
+		// Attackクラスを呼び出す
+		Attack a = new Attack();
+		// Attackの値を出力する
+		a.setStatus();
+		
+
+		// Speedクラスを呼び出す
+		Speed sp = new Speed();
+		// Speedの値を出力する
+		sp.setStatus();
+		
+		
+		// Defenceクラスを呼び出す
+		Defence d = new Defence();
+		// Defenceの値を出力する
+		d.setStatus();
+		
 		
 		// 改行
 		System.out.println("");
