@@ -6,8 +6,6 @@ import prefecture.Prefecture;
 import java.util.stream.Stream;
 // Arraysをインポートする
 import java.util.Arrays;
-// Collectionsをインポートする
-import java.util.Collections;
 
 public class Main {
 
