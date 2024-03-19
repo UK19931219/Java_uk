@@ -34,11 +34,11 @@ public class Main {
 		// コンソールに数字を入力
 		String number = new java.util.Scanner(System.in).nextLine();
 		
-        // 分割に用いる文字を指定,分割後に配列dataArrayに代入
-        String[] dataArray = number.split(",");		
+        // 分割に用いる文字を指定,分割後に配列stringArrayに代入
+        String[] stringArray = number.split(",");		
 		
         // String型配列 を int型配列 に変換
-        int[] intArray = Stream.of(dataArray).mapToInt(Integer::parseInt).toArray();
+        int[] intArray = Stream.of(stringArray).mapToInt(Integer::parseInt).toArray();
         
         // コンソールに出力
      	System.out.print("昇順もしくは降順と入力してください：");
@@ -47,14 +47,14 @@ public class Main {
      	String order = new java.util.Scanner(System.in).nextLine();     	
      	
      	//　昇順と入力された場合
-     	if(order == "昇順") {
+     	if(order.equals("昇順")) {
      		// 配列intArrayを昇順に並べ替える
      		Arrays.sort(intArray);
-     	}
-     	
      	// 降順と入力された場合
-     	if(order == "降順") {
+     	}else if(order.equals("降順")) {
+     		// いったん昇順に並べ替える
      		Arrays.sort(intArray);
+     		// 降順に並べ替える
      		for (int f = 0, l = intArray.length - 1; f < l; f++, l--){
      			int temp = intArray[f];
      			intArray[f]  = intArray[l];
@@ -69,9 +69,9 @@ public class Main {
         // 都道府県のデータを出力する
         for(int i = 0; i < intArray.length; i++) {
         	// 都道府県の番号を入力
-        	p.setNum(data[intArray[i]][0]);
+        	p.setNum(data[ intArray[i] ][0]);
         	// 都道府県のデータを入力
-        	p.setData(data[intArray[i]][1]);
+        	p.setData(data[ intArray[i] ][1]);
         	// 入力したデータを出力
         	p.getData();
         	// 改行
