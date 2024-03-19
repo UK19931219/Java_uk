@@ -6,6 +6,8 @@ import prefecture.Prefecture;
 import java.util.stream.Stream;
 // Arraysをインポートする
 import java.util.Arrays;
+// Collectionsをインポートする
+import java.util.Collections;
 
 public class Main {
 
@@ -29,7 +31,7 @@ public class Main {
 				{"10", "埼玉県:さいたま市:3798"} };
 		
 		// コンソールに出力
-		System.out.println("コンソールに数字を入力してください");
+		System.out.println("コンソールに数字を入力してください（例：7,5,8....）");
 		
 		// コンソールに数字を入力
 		String number = new java.util.Scanner(System.in).nextLine();
@@ -39,9 +41,32 @@ public class Main {
 		
         // String型配列 を int型配列 に変換
         int[] intArray = Stream.of(dataArray).mapToInt(Integer::parseInt).toArray();
+        
+        // コンソールに出力
+     	System.out.print("昇順もしくは降順と入力してください：");
 		
-        // 配列intArrayを昇順に並べ替える
-        Arrays.sort(intArray);
+     	// コンソールに昇順、降順を入力
+     	String order = new java.util.Scanner(System.in).nextLine();     	
+     	
+     	//　昇順と入力された場合
+     	if(order == "昇順") {
+     		// 配列intArrayを昇順に並べ替える
+     		Arrays.sort(intArray);
+     	}
+     	
+     	// 降順と入力された場合
+     	if(order == "降順") {
+     		Arrays.sort(intArray);
+     		for (int f = 0, l = intArray.length - 1; f < l; f++, l--){
+     			int temp = intArray[f];
+     			intArray[f]  = intArray[l];
+     			intArray[l] = temp;
+     		}
+     	}
+     	
+     	//改行
+     	System.out.println("");
+        
         
         // 都道府県のデータを出力する
         for(int i = 0; i < intArray.length; i++) {
